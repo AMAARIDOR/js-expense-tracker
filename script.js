@@ -33,4 +33,5 @@ document.getElementById("addExpense").addEventListener("click", () => {
   nameOfExpenseDataCell.textContent = nameOfExpenseElementValue;
   dateOfExpenseDataCell.textContent = dateOfExpenseElementValue;
   amountOfExpenseDataCell.textContent = amountOfExpenseElementValue;
+  deleteButtonTableRow.innerHTML = `<button id="deleteButtonTableRow${i}">X</button>`;
 });
