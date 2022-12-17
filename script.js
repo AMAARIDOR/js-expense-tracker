@@ -2,6 +2,12 @@
 
 let i = 0;
 
+// Takes value index value from deleteButtonTableRow button's this.parentNode.parentNode.nodeIndex
+
+let deleteTableRow = (k) => {
+  document.getElementById("expenseTable").deleteRow(k);
+};
+
 document.getElementById("addExpense").addEventListener("click", () => {
   let table = document.getElementById("expenseTable");
   let tableRow = table.insertRow(-1);
@@ -22,16 +28,12 @@ document.getElementById("addExpense").addEventListener("click", () => {
 
   i++;
 
-  tableRow.id = `tableRow${i}`;
-  typeOfExpenseDataCell.id = `typeOfExpenseDataCell${i}`;
-  nameOfExpenseDataCell.id = `nameOfExpenseDataCell${i}`;
-  dateOfExpenseDataCell.id = `dateOfExpenseDataCell${i}`;
-  amountOfExpenseDataCell.id = `amountOfExpenseDataCell${i}`;
-  deleteButtonTableRow.id = `deleteButtonTableRow${i}`;
+  tableRow.id = `${i}`;
 
   typeOfExpenseDataCell.textContent = typeOfExpenseElementValue;
   nameOfExpenseDataCell.textContent = nameOfExpenseElementValue;
   dateOfExpenseDataCell.textContent = dateOfExpenseElementValue;
   amountOfExpenseDataCell.textContent = amountOfExpenseElementValue;
-  deleteButtonTableRow.innerHTML = `<button id="deleteButtonTableRow${i}">X</button>`;
+
+  deleteButtonTableRow.innerHTML = `<button onclick="deleteTableRow(this.parentNode.parentNode.rowIndex)" class="deleteButtons" id="deleteButtonTableRow${i}">X</button>`;
 });
