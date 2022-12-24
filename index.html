@@ -12,12 +12,17 @@
       <h1>Expense Tracker 💸</h1>
     </header>
 
-    <h2>Add a New Item:</h2>
-
     <div id="expenseFormSection">
-      <label for="typeOfExpense"
+      <h2>Add a New Item:</h2>
+
+      <label class="formLabels" for="typeOfExpense"
         >Type:
-        <input name="typeOfExpense" id="typeOfExpense" list="typesOfExpenses" />
+        <input
+          class="formLabels"
+          name="typeOfExpense"
+          id="typeOfExpense"
+          list="typesOfExpenses"
+        />
         <datalist id="typesOfExpenses">
           <option value="Debit Card"></option>
           <option value="Credit Card"></option>
@@ -28,19 +33,29 @@
         </datalist>
       </label>
       <br />
-      <label for="nameOfExpense"
+      <label class="formLabels" for="nameOfExpense"
         >Name:
-        <input id="nameOfExpense" type="text" />
+        <input class="formLabels" id="nameOfExpense" type="text" />
       </label>
       <br />
-      <label for="dateOfExpense"
+      <label class="formLabels" for="dateOfExpense"
         >Date:
-        <input type="date" name="dateOfExpense" id="dateOfExpense" />
+        <input
+          class="formLabels"
+          type="date"
+          name="dateOfExpense"
+          id="dateOfExpense"
+        />
       </label>
       <br />
-      <label for="amountOfExpense"
+      <label class="formLabels" for="amountOfExpense"
         >Amount:
-        <input type="number" name="amountOfExpense" id="amountOfExpense" />
+        <input
+          class="formLabels"
+          type="number"
+          name="amountOfExpense"
+          id="amountOfExpense"
+        />
       </label>
       <br />
       <button id="addExpense">Add Expense</button>
