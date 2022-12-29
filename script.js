@@ -1,5 +1,7 @@
 "use strict";
 
+// Counter:
+
 let i = 0;
 
 // Takes value index value from deleteButtonTableRow button's this.parentNode.parentNode.nodeIndex
@@ -7,6 +9,8 @@ let i = 0;
 let deleteTableRow = (k) => {
   document.getElementById("expenseTable").deleteRow(k);
 };
+
+// Handles clicks and inserts cells for table:
 
 document.getElementById("addExpense").addEventListener("click", () => {
   let table = document.getElementById("expenseTable");
@@ -33,6 +37,8 @@ document.getElementById("addExpense").addEventListener("click", () => {
   nameOfExpenseDataCell.textContent = expenseValues.nameOfExpense;
   dateOfExpenseDataCell.textContent = expenseValues.dateOfExpense;
   amountOfExpenseDataCell.textContent = expenseValues.amountOfExpense;
+
+  // Adds button for deleting current cell. 
 
   deleteButtonTableRow.innerHTML = `<button onclick="deleteTableRow(this.parentNode.parentNode.rowIndex)" class="deleteButtons" id="deleteButtonTableRow${i}">X</button>`;
 });
